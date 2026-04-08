@@ -1,0 +1,185 @@
+@font-face {
+  font-family: "Lora";
+  src: url(../assets/font/Lora/Lora-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: "Lora-i";
+  src: url(../assets/font/Lora/Lora-Italic-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: "PressStart2P";
+  src: url(../assets/font/Press_Start_2P/PressStart2P-Regular.ttf);
+}
+/* suonan rani ha
+color
+#22162b
+#451f55
+#724e91
+#e54f6d
+#F8C630*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lora", serif;
+}
+body {
+  color: white;
+}
+header h1{
+  text-align: center;
+  margin-top: 50px;
+  font-size: 4em;
+  color: #724e91;
+}
+main {
+  display: grid;
+  justify-content: center;
+  max-width: 960px;
+  margin: 0 auto;
+}
+/*Input*/
+input {
+  margin-top: 10px;
+  font-size: 17px;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  padding: 5px 0;
+  background-color: transparent;
+  outline: none;
+}
+input:focus {
+  border-bottom-color: #724e91;
+  caret-color: pink;
+  color: pink;
+}
+input::placeholder {
+  color: #ccc;
+}
+input:hover {
+  cursor: url(../assets/cursor/text_.png),pointer;
+}
+/*TaskList*/
+#taskList li {
+  color: #22162b;
+  font-size: 1.2em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  list-style: none;
+  border: 2px solid #22162b;
+  border-radius: 25px;
+  padding-left: 10px;
+  padding-top: 10px;
+  margin-top: 10px;
+  background-color: #c9bc6f;
+  font-family: "Lora", cursive;
+  max-width: 960px;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+#addTask {
+  margin-top: 10px;
+  margin-left: 470px;
+  width: 170px;
+  height: 60px;
+  font-size: 15px;
+  background: #724e91;
+  border: none;
+  border-radius: 50px;
+  color: #000;
+  outline: none;
+  transition: all 0.4s;
+  font-family: "PressStart2P", cursive;
+}
+#addTask:hover {
+  box-shadow: inset 0 0 0 4px #ef476f, 
+              inset 0 0 0 8px #ffd166, 
+              inset 0 0 0 12px #06d6a0,
+              inset 0 0 0 16px #118ab2;
+  background: #073b4c;
+  color: #fff;
+}
+/*Delete button*/
+.deleteButton {
+  float: right;
+ width: 5em;
+ height: 2em;
+ margin: 0.5em;
+ background: black;
+ color: white;
+ border: none;
+ border-radius: 0.625em;
+ font-size: 20px;
+ font-weight: bold;
+ position: relative;
+ z-index: 1;
+ overflow: hidden;
+}
+.deleteButton:hover {
+ cursor: url(../assets/cursor/litter_.png), pointer;
+}
+.deleteButton:after {
+ content: "";
+ background: red;
+ position: absolute;
+ z-index: -1;
+ left: -20%;
+ right: -20%;
+ top: 0;
+ bottom: 0;
+ transform: skewX(-45deg) scale(0, 1);
+ transition: all 0.5s;
+}
+
+.deleteButton:hover:after {
+ transform: skewX(-45deg) scale(1, 1);
+ -webkit-transition: all 0.5s;
+ transition: all 0.5s;
+}
+/*Background video*/
+.background-video {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  filter: brightness(25%);
+}
+/* Responsive Design */
+ @media (max-width: 768px) {
+  body {
+    font-size: 10px;
+    overflow-x: hidden;
+    padding-right: 100px;
+    margin-left: 100px;
+  }
+  #addTask {
+    margin-left: auto;
+    margin-right: auto;
+    width: 140px;
+    height: 50px;
+  }
+  main {
+    padding: 20px;
+  }
+  .deleteButton {
+    width: 50%;
+    max-width: 3.5em;
+    margin-top: 10px;
+  }
+  video {
+    align-items: flex-start;
+    min-height: 100svh;
+    width: 100%;
+    max-width: 400px;
+  }
+ }
