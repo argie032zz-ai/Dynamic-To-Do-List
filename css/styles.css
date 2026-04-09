@@ -62,22 +62,27 @@ input:hover {
 /*TaskList*/
 #taskList li {
   color: #22162b;
-  font-size: 1.2em;
+  font-size: 1em;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   list-style: none;
   border: 2px solid #22162b;
-  border-radius: 25px;
+  border-radius: 20px;
   padding-left: 10px;
   padding-top: 10px;
   margin-top: 10px;
   background-color: #c9bc6f;
-  font-family: "Lora", cursive;
+  font-family: "Lora-i", cursive;
   max-width: 960px;
   margin: 0 auto;
   margin-top: 10px;
 }
+li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 #addTask {
   margin-top: 10px;
   margin-left: 470px;
@@ -110,7 +115,7 @@ input:hover {
  color: white;
  border: none;
  border-radius: 0.625em;
- font-size: 20px;
+ font-size: 15px;
  font-weight: bold;
  position: relative;
  z-index: 1;
@@ -167,6 +172,15 @@ input:hover {
     margin-right: auto;
     width: 140px;
     height: 50px;
+  }
+  #taskList li {
+    font-size: 1.5em;
+    max-width: 100%;
+  }
+  li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   main {
     padding: 20px;
